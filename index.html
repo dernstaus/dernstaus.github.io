@@ -3,66 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap" rel="stylesheet">
     <title>Montivera | Strategy & Management Consulting</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #353839;
             color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
+            font-family: "Spline Sans", sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
             height: 100vh;
             position: relative;
             padding: 20px;
         }
-        .content {
-            max-width: 50%;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
         }
         .logo {
+            max-width: 150px;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #c5c6d0;
+        }
+        .content, .team {
+            max-width: 50%;
+            padding: 20px;
+            text-align: left;
+        }
+        .contact {
             position: absolute;
             bottom: 20px;
             right: 20px;
-            max-width: 150px;
+            font-size: 14px;
+            text-align: right;
         }
-        .contact {
-            margin-top: 20px;
-            font-size: 16px;
+        ul {
+            list-style: none;
+            padding: 0;
+            line-height: 1.5;
+        }
+        ul li::before {
+            content: "- ";
+            margin-left: 20px;
         }
         @media (max-width: 768px) {
-            .content {
+            .content, .team {
                 max-width: 80%;
             }
             .logo {
                 max-width: 100px;
-                bottom: 10px;
-                right: 10px;
             }
         }
         @media (max-width: 480px) {
-            .content {
+            .content, .team {
                 max-width: 95%;
             }
             .logo {
-                display: none;
+                max-width: 80px;
+            }
+            .contact {
+                position: static;
+                text-align: center;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>Montivera provides expert strategy and management consulting across product development, commercial strategy, risk management, and market entry. We help businesses navigate complexity, optimize decision-making, and drive sustainable growth in energy, carbon, and commodity markets.</p>
-        <div class="contact">
-            <p>Contact us: <br>Email: contact@montivera.com <br>Phone: +61 400 123 456</p>
-        </div>
+     <div class="header">
+        <img src="logo.svg" alt="Montivera Logo" class="logo">
+        <!--<div class="nav">
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </div>  -->
+    </div> 
+    <div class="content" id="services">
+        <h3>Montivera provides strategy and management consulting in Australian and international energy, carbon, and commodity markets.</h3>
+        <p>Our expertise spans:</p>
+        <ul>
+          <li>Contract and commercial negotiation</li>
+          <li>Digital and commercial product development</li>
+          <li>Market entry investigation and business case development</li>
+          <li>Strategic reviews</li>
+          <li>System integration</li>
+        </ul>
+        <p>We help businesses navigate complexity, optimise decision-making, and drive sustainable growth.</p>
     </div>
-    <img src="logo.svg" alt="Montivera Logo" class="logo">
+    <div class="team" id="team">
+        <h3>Our Team</h3>
+        <p>Montivera is led by Dominic Ernst, an experienced energy executive with experience across the value chain.</p>
+        <a href="https://www.linkedin.com/in/dominic-ernst"><img src="In-White-40.png" alt="Dominic Ernst on LinkedIn"></a>
+    </div>
+    <div class="contact" id="contact">
+        <p>Can we help? <br>hello@montivera.com.au<br>+61 457 506 709</p>
+    </div>
 </body>
 </html>
